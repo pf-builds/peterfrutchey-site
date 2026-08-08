@@ -38,7 +38,11 @@
   .navlinks a:hover{color:var(--teal-dk);}
   @media(max-width:620px){ .navlinks{display:none;} }
   /* hero */
-  .hero{padding:66px 0 20px;}
+  .hero{padding:66px 0 44px;
+    background:
+      radial-gradient(ellipse 60% 70% at 85% 20%, rgba(14,133,119,.10), transparent 60%),
+      radial-gradient(ellipse 50% 60% at 15% 85%, rgba(224,138,43,.06), transparent 60%),
+      linear-gradient(180deg, var(--teal-lt) 0%, #fff 70%);}
   .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
   h1{font-size:40px;line-height:1.15;letter-spacing:-1px;font-weight:700;}
   .hero p{font-size:16.5px;color:var(--grey);margin-top:18px;max-width:560px;}
@@ -46,15 +50,16 @@
     font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;
     margin-top:24px;border:none;cursor:pointer;}
   .btn:hover{background:var(--teal-dk);}
-  .headshot{aspect-ratio:1/1;border-radius:14px;background:var(--teal-lt);
+  .headshot{aspect-ratio:1/1;border-radius:14px;background:#fff;
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-    color:#9DB8B2;font-size:13px;text-align:center;padding:16px;overflow:hidden;}
+    color:#9DB8B2;font-size:13px;text-align:center;padding:16px;overflow:hidden;
+    box-shadow:0 10px 30px rgba(14,133,119,.10);}
   .headshot img{width:100%;height:100%;object-fit:cover;border-radius:14px;}
   @media(max-width:720px){ .hero-grid{grid-template-columns:1fr;} .headshot{max-width:260px;} h1{font-size:32px;} }
   /* credibility strip */
-  .cred{background:var(--teal-lt);margin-top:34px;}
-  .cred .wrap{padding:15px 26px;font-size:13.5px;color:var(--teal-dk);
-    font-weight:500;text-align:center;}
+  .cred{background:var(--teal-dk);}
+  .cred .wrap{padding:15px 26px;font-size:13.5px;color:#DFF1ED;
+    font-weight:500;text-align:center;letter-spacing:.2px;}
   /* sections */
   section{padding:52px 0;}
   .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;
@@ -83,6 +88,16 @@
   .svc .t{font-size:15px;font-weight:600;}
   .svc .d{font-size:14px;color:var(--grey);}
   .svc .ex{font-size:13px;color:var(--teal-dk);font-style:italic;}
+  /* testimonials */
+  .quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .quote{border:1px solid var(--line);border-left:4px solid var(--teal);
+    border-radius:10px;padding:18px 20px;background:#fff;}
+  .quote p{font-size:14px;color:var(--ink);font-style:italic;margin-bottom:10px;}
+  .quote .who{font-size:13px;color:var(--grey);font-style:normal;}
+  .quote .who b{color:var(--teal-dk);}
+  .quotesrc{font-size:12.5px;color:var(--grey);margin-top:14px;}
+  .quotesrc a{color:var(--teal-dk);font-weight:600;}
+  @media(max-width:620px){ .quotes{grid-template-columns:1fr;} }
   /* contact */
   .contact{background:var(--teal-lt);border-radius:14px;padding:34px 30px;}
   .contact h2{font-size:24px;margin-bottom:6px;}
@@ -109,6 +124,7 @@
       <a href="#whatido">What I do</a>
       <a href="#how">How it works</a>
       <a href="#services">Services</a>
+      <a href="#proof">References</a>
       <a href="#contact">Contact</a>
     </span>
   </div>
@@ -117,22 +133,22 @@
 <header class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>I help businesses find what's slowing their operations down, and hand them a plan to fix it.</h1>
-      <p>For fifteen years I've run the behind-the-scenes systems that make service and
-      support teams work: process, knowledge, self-service, and lately AI. Now I bring that
-      experience to businesses as an outside set of expert eyes. I assess, I advise, and I
-      give you a roadmap you can act on.</p>
+      <h1>Find what's slowing your business down. Get a plan to fix it.</h1>
+      <p>I've spent thirteen years running the systems that make service and support teams
+      work: process, knowledge, self-service, and AI. I bring that experience to your
+      business as an outside set of expert eyes. I assess, I advise, and I hand you a
+      roadmap you can act on.</p>
       <a class="btn" href="#contact">Book a free intro call</a>
     </div>
     <!-- HEADSHOT: replace the placeholder below with <img src="headshot.jpg" alt="Peter Frutchey"> -->
-    <div class="headshot">Your photo here<br>(optional, but it helps)</div>
+    <div class="headshot">Photo coming soon</div>
   </div>
 </header>
 
 <div class="cred">
   <div class="wrap">
-    Fifteen years at Tesla and a national healthcare company &nbsp;·&nbsp;
-    Built an AI system recognized company-wide by the CEO &nbsp;·&nbsp;
+    Apple &nbsp;·&nbsp; Tesla &nbsp;·&nbsp; National healthcare platform &nbsp;·&nbsp;
+    Designed enterprise AI enablement programs &nbsp;·&nbsp;
     Lean Six Sigma Green Belt
   </div>
 </div>
@@ -218,7 +234,40 @@
         defined project so it stays clear.</span></div>
     </div>
 
-    <!-- TESTIMONIALS: add real client quotes here once you have permission. Do not invent any. -->
+  </div>
+</section>
+
+<section id="proof" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">What leaders who've worked with me say</div>
+    <div class="quotes">
+      <div class="quote">
+        <p>"Peter is a tremendous operational leader... I would recommend Peter to any
+        organization looking to improve their processes to drive better business outcomes."</p>
+        <div class="who"><b>Mike Child</b>, Vice President, CX Strategy &amp; Operations,
+        Peter's former VP</div>
+      </div>
+      <div class="quote">
+        <p>"Offer him a problem today and he will return tomorrow with a concept solution
+        that normally takes months for others to achieve."</p>
+        <div class="who"><b>Michael Hall</b>, Site Director, Member Services</div>
+      </div>
+      <div class="quote">
+        <p>"Peter is adept at taking a big picture view of a process or problem, identifying
+        areas for improvement and creating a plan to close identified gaps."</p>
+        <div class="who"><b>Heather Lopez</b>, CX, Operations and Technology Leader,
+        managed Peter at two companies</div>
+      </div>
+      <div class="quote">
+        <p>"He'd push past the surface-level fix to ask what a process or knowledge gap was
+        really telling us... he made me a better thinker."</p>
+        <div class="who"><b>John Halvorson</b>, Senior Operations Leader, Claims &amp;
+        Health Plan Operations</div>
+      </div>
+    </div>
+    <div class="quotesrc">From public recommendations on
+      <a href="https://www.linkedin.com/in/peterfrutchey" rel="noopener">Peter's LinkedIn profile</a>.
+    </div>
   </div>
 </section>
 
@@ -245,7 +294,8 @@
 <footer>
   <div class="wrap">
     Peter Frutchey &nbsp;·&nbsp; Operations &amp; AI Consulting &nbsp;·&nbsp; Sacramento, California
-    &nbsp;·&nbsp; Advisory, project, and fractional engagements &nbsp;·&nbsp; peterfrutchey.com
+    &nbsp;·&nbsp; Advisory, project, and fractional engagements &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/peterfrutchey" rel="noopener" style="color:#0A5F55;font-weight:600;">LinkedIn</a>
   </div>
 </footer>
 
