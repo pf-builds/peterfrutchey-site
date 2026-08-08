@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter Frutchey, Operations &amp; AI Consulting</title>
+<meta name="description" content="I help businesses see what's slowing their operations down, and hand them a plan to fix it. Independent operations and AI advisory.">
+<meta property="og:title" content="Peter Frutchey, Operations &amp; AI Consulting">
+<meta property="og:description" content="I help businesses see what's slowing their operations down, and hand them a plan to fix it.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E8577'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3EPF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16211F; --teal:#0E8577; --teal-dk:#0A5F55; --teal-lt:#E8F5F2;
+    --amber:#E08A2B; --grey:#4A5754; --line:#CBD9D5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.6;
+    background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,.name{font-family:'Space Grotesk','Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .navin{display:flex;justify-content:space-between;align-items:center;
+    max-width:1080px;margin:0 auto;padding:14px 26px;}
+  .brand{font-weight:700;font-size:19px;display:flex;align-items:center;gap:9px;}
+  .brand .sq{width:22px;height:22px;border-radius:6px;background:var(--teal);
+    display:inline-flex;align-items:center;justify-content:center;color:#fff;
+    font-size:11px;font-weight:700;}
+  .navlinks a{margin-left:24px;font-size:14.5px;color:var(--grey);
+    text-decoration:none;font-weight:500;}
+  .navlinks a:hover{color:var(--teal-dk);}
+  @media(max-width:620px){ .navlinks{display:none;} }
+  /* hero */
+  .hero{padding:66px 0 20px;}
+  .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
+  h1{font-size:40px;line-height:1.15;letter-spacing:-1px;font-weight:700;}
+  .hero p{font-size:16.5px;color:var(--grey);margin-top:18px;max-width:560px;}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:600;
+    font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;
+    margin-top:24px;border:none;cursor:pointer;}
+  .btn:hover{background:var(--teal-dk);}
+  .headshot{aspect-ratio:1/1;border-radius:14px;background:var(--teal-lt);
+    border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
+    color:#9DB8B2;font-size:13px;text-align:center;padding:16px;overflow:hidden;}
+  .headshot img{width:100%;height:100%;object-fit:cover;border-radius:14px;}
+  @media(max-width:720px){ .hero-grid{grid-template-columns:1fr;} .headshot{max-width:260px;} h1{font-size:32px;} }
+  /* credibility strip */
+  .cred{background:var(--teal-lt);margin-top:34px;}
+  .cred .wrap{padding:15px 26px;font-size:13.5px;color:var(--teal-dk);
+    font-weight:500;text-align:center;}
+  /* sections */
+  section{padding:52px 0;}
+  .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;
+    color:var(--teal-dk);font-weight:700;margin-bottom:22px;font-family:'Inter';}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .card{border:1px solid var(--line);border-radius:10px;padding:20px 22px;}
+  .card h3{font-size:17px;margin-bottom:7px;display:flex;align-items:center;gap:9px;}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);flex:none;}
+  .card p{font-size:14px;color:var(--grey);}
+  @media(max-width:620px){ .cards{grid-template-columns:1fr;} }
+  /* how band */
+  .band{background:var(--ink);color:#fff;border-radius:14px;padding:34px 30px;}
+  .band .eyebrow{color:#7FD6C8;}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .step .n{font-size:13px;color:var(--amber);font-weight:700;letter-spacing:1px;font-family:'Space Grotesk';}
+  .step h4{font-size:16px;margin:4px 0 5px;}
+  .step p{font-size:13px;color:#B9C7C3;line-height:1.5;}
+  @media(max-width:680px){ .steps{grid-template-columns:1fr 1fr;gap:22px;} }
+  /* services */
+  .grp{margin-bottom:24px;}
+  .grptitle{font-size:15px;font-weight:700;color:var(--teal-dk);
+    border-bottom:1.5px solid var(--teal-lt);padding-bottom:6px;margin-bottom:12px;}
+  .svc{margin-bottom:12px;padding-left:18px;position:relative;}
+  .svc::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;
+    background:var(--amber);border-radius:2px;transform:rotate(45deg);}
+  .svc .t{font-size:15px;font-weight:600;}
+  .svc .d{font-size:14px;color:var(--grey);}
+  .svc .ex{font-size:13px;color:var(--teal-dk);font-style:italic;}
+  /* contact */
+  .contact{background:var(--teal-lt);border-radius:14px;padding:34px 30px;}
+  .contact h2{font-size:24px;margin-bottom:6px;}
+  .contact .sub{font-size:15px;color:var(--grey);margin-bottom:20px;}
+  form{display:grid;gap:12px;max-width:520px;}
+  form input,form textarea{font-family:inherit;font-size:15px;padding:12px 14px;
+    border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
+  form input:focus,form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal);}
+  form textarea{min-height:110px;resize:vertical;}
+  form button{justify-self:start;}
+  .altmail{font-size:13.5px;color:var(--grey);margin-top:14px;}
+  .altmail a{color:var(--teal-dk);font-weight:600;}
+  /* footer */
+  footer{border-top:1px solid var(--line);margin-top:40px;}
+  footer .wrap{padding:22px 26px;font-size:12.5px;color:#8A9793;text-align:center;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navin">
+    <span class="brand"><span class="sq">PF</span>Peter Frutchey</span>
+    <span class="navlinks">
+      <a href="#whatido">What I do</a>
+      <a href="#how">How it works</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </span>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>I help businesses find what's slowing their operations down, and hand them a plan to fix it.</h1>
+      <p>For fifteen years I've run the behind-the-scenes systems that make service and
+      support teams work: process, knowledge, self-service, and lately AI. Now I bring that
+      experience to businesses as an outside set of expert eyes. I assess, I advise, and I
+      give you a roadmap you can act on.</p>
+      <a class="btn" href="#contact">Book a free intro call</a>
+    </div>
+    <!-- HEADSHOT: replace the placeholder below with <img src="headshot.jpg" alt="Peter Frutchey"> -->
+    <div class="headshot">Your photo here<br>(optional, but it helps)</div>
+  </div>
+</header>
+
+<div class="cred">
+  <div class="wrap">
+    Fifteen years at Tesla and a national healthcare company &nbsp;·&nbsp;
+    Built an AI system recognized company-wide by the CEO &nbsp;·&nbsp;
+    Lean Six Sigma Green Belt
+  </div>
+</div>
+
+<section id="whatido">
+  <div class="wrap">
+    <div class="eyebrow">What I look at for you</div>
+    <div class="cards">
+      <div class="card"><h3><span class="dot"></span>Where AI actually fits</h3>
+        <p>I review how your team works and show you the few highest-value places AI would
+        help, ranked by effort and payoff, with a plan to get there. No hype, no guessing.</p></div>
+      <div class="card"><h3><span class="dot"></span>What's slowing you down</h3>
+        <p>I map how work really flows, find the bottlenecks and rework, and give you a clear
+        recommendation for a cleaner way to run.</p></div>
+      <div class="card"><h3><span class="dot"></span>How to lighten your support load</h3>
+        <p>I assess where a help center or self-service could cut the questions reaching your
+        team. I've guided this to a measurable 7% drop in contacts.</p></div>
+      <div class="card"><h3><span class="dot"></span>Where your knowledge is stuck</h3>
+        <p>I find what's trapped in people's heads and lay out how to turn it into clear
+        procedures your team, and your AI tools, can rely on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="padding-top:0;">
+  <div class="wrap">
+    <div class="band">
+      <div class="eyebrow">How working together goes</div>
+      <div class="steps">
+        <div class="step"><div class="n">01</div><h4>Talk</h4>
+          <p>A free call to hear what's slowing you down. No pitch.</p></div>
+        <div class="step"><div class="n">02</div><h4>Assess</h4>
+          <p>I dig into how the work actually runs and where the real problems are.</p></div>
+        <div class="step"><div class="n">03</div><h4>Recommend</h4>
+          <p>You get a clear, prioritized plan you can act on, with or without me.</p></div>
+        <div class="step"><div class="n">04</div><h4>Support</h4>
+          <p>If you want, I help you carry it out or guide your team doing it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:0;">
+  <div class="wrap">
+    <div class="eyebrow">What I can help with</div>
+
+    <div class="grp">
+      <div class="grptitle">Start here: assessments &amp; advice</div>
+      <div class="svc"><span class="t">AI opportunity review.</span>
+        <span class="d">I find the two or three places AI would actually save your team time,
+        ranked by effort and payoff.</span>
+        <span class="ex">You get a clear plan you can act on, with or without me.</span></div>
+      <div class="svc"><span class="t">Operations &amp; process review.</span>
+        <span class="d">I map how work really flows, find the waste and rework, and recommend a
+        cleaner way to run it.</span>
+        <span class="ex">Work like this has cut transfers 20% and contacts 9% on a team.</span></div>
+      <div class="svc"><span class="t">Support &amp; self-service assessment.</span>
+        <span class="d">I find where a help center or self-service could cut the questions
+        reaching your team, and what it would take.</span>
+        <span class="ex">Guided to a 7% drop in contacts, ~90% of visitors never needing to follow up.</span></div>
+      <div class="svc"><span class="t">Rollout &amp; readiness review.</span>
+        <span class="d">Before you onboard a big customer or launch new software, I pressure-test
+        whether you're actually ready and flag what will break.</span>
+        <span class="ex">Delivered readiness across dozens of enterprise implementation projects.</span></div>
+      <div class="svc"><span class="t">Advisory retainer.</span>
+        <span class="d">An ongoing outside set of expert eyes for a founder or operations lead.
+        A standing monthly call and someone to think the hard calls through with.</span></div>
+    </div>
+
+    <div class="grp">
+      <div class="grptitle">Quick win: business documents</div>
+      <div class="svc"><span class="t">Sharpen how you present the business.</span>
+        <span class="d">Clear one-pagers, service and pricing menus, and proposals that explain
+        what you offer and help you win the work.</span>
+        <span class="ex">Often the fastest, lowest-cost place to start together.</span></div>
+    </div>
+
+    <div class="grp">
+      <div class="grptitle">If you want it built too</div>
+      <div class="svc"><span class="t">Hands-on help carrying out the plan.</span>
+        <span class="d">Once we agree on the direction, I can build the AI assistant, set up the
+        help center, run the process redesign, or guide your own team doing it. Scoped as a
+        defined project so it stays clear.</span></div>
+    </div>
+
+    <!-- TESTIMONIALS: add real client quotes here once you have permission. Do not invent any. -->
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Start with a free call</h2>
+      <div class="sub">Tell me what's slowing your team down. If I can help, I'll show you how.</div>
+      <!-- FORMSPREE: replace REPLACE_WITH_YOUR_FORMSPREE_ID with your real form ID from formspree.io -->
+      <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORMSPREE_ID" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="text" name="company" placeholder="Company (optional)">
+        <textarea name="message" placeholder="What's slowing your team down?" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <div class="altmail">Or email me directly at
+        <a id="mail" href="#">(enable JavaScript to see)</a>.
+        <noscript>peterfrutchey [at] gmail [dot] com</noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Peter Frutchey &nbsp;·&nbsp; Operations &amp; AI Consulting &nbsp;·&nbsp; Sacramento, California
+    &nbsp;·&nbsp; Advisory, project, and fractional engagements &nbsp;·&nbsp; peterfrutchey.com
+  </div>
+</footer>
+
+<script>
+  // Assemble the email so the raw address isn't sitting in the HTML for scrapers.
+  (function(){
+    var u="peterfrutchey", d="gmail.com";
+    var a=document.getElementById("mail");
+    if(a){ a.href="mailto:"+u+"@"+d; a.textContent=u+"@"+d; }
+  })();
+</script>
+
+</body>
+</html>
