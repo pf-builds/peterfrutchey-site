@@ -45,7 +45,7 @@
       linear-gradient(180deg, var(--teal-lt) 0%, #fff 70%);}
   .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center;}
   h1{font-size:40px;line-height:1.15;letter-spacing:-1px;font-weight:700;}
-  .hero p{font-size:16.5px;color:var(--grey);margin-top:18px;max-width:560px;}
+  .hero p{font-size:17px;color:var(--grey);margin-top:18px;max-width:560px;}
   .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:600;
     font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;
     margin-top:24px;border:none;cursor:pointer;}
@@ -58,55 +58,63 @@
   @media(max-width:720px){ .hero-grid{grid-template-columns:1fr;}
     /* Fills the column on phones; the cap only bites on wider tablets,
        where an uncapped 4:5 photo would take up the whole screen. */
-    .headshot{max-width:420px;margin-inline:auto;} h1{font-size:32px;} }
+    .headshot{max-width:420px;margin-inline:auto;} h1{font-size:34px;} }
   /* credibility strip */
   .cred{background:var(--teal-dk);}
-  .cred .wrap{padding:15px 26px;font-size:13.5px;color:#DFF1ED;
+  .cred .wrap{padding:15px 26px;font-size:14.5px;color:#DFF1ED;
     font-weight:500;text-align:center;letter-spacing:.2px;}
   /* sections */
   section{padding:52px 0;}
-  .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;
+  .eyebrow{font-size:12.5px;text-transform:uppercase;letter-spacing:1.6px;
     color:var(--teal-dk);font-weight:700;margin-bottom:22px;font-family:'Inter';}
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .card{border:1px solid var(--line);border-radius:10px;padding:20px 22px;}
-  .card h3{font-size:17px;margin-bottom:7px;display:flex;align-items:center;gap:9px;}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);flex:none;}
-  .card p{font-size:14px;color:var(--grey);}
+  /* flex-start, not center: when the heading wraps to two lines the dot
+     should sit against the first line rather than float between them. */
+  .card h3{font-size:18px;margin-bottom:7px;display:flex;align-items:flex-start;gap:9px;}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);flex:none;margin-top:10px;}
+  .card p{font-size:15.5px;color:var(--grey);}
   @media(max-width:620px){ .cards{grid-template-columns:1fr;} }
   /* how band */
   .band{background:var(--ink);color:#fff;border-radius:14px;padding:34px 30px;}
   .band .eyebrow{color:#7FD6C8;}
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
   .step .n{font-size:13px;color:var(--amber);font-weight:700;letter-spacing:1px;font-family:'Space Grotesk';}
-  .step h4{font-size:16px;margin:4px 0 5px;}
-  .step p{font-size:13px;color:#B9C7C3;line-height:1.5;}
-  @media(max-width:680px){ .steps{grid-template-columns:1fr 1fr;gap:22px;} }
+  .step h4{font-size:17px;margin:4px 0 5px;}
+  .step p{font-size:15px;color:#B9C7C3;line-height:1.55;}
+  /* Four across needs real width. Drop to 2x2 early, and to a single
+     column on phones, where four columns left ~3 words per line. */
+  @media(max-width:900px){ .steps{grid-template-columns:1fr 1fr;gap:22px;} }
+  @media(max-width:560px){ .steps{grid-template-columns:1fr;gap:20px;}
+    .band{padding:28px 22px;} }
   /* services */
   .grp{margin-bottom:24px;}
-  .grptitle{font-size:15px;font-weight:700;color:var(--teal-dk);
+  .grptitle{font-size:16px;font-weight:700;color:var(--teal-dk);
     border-bottom:1.5px solid var(--teal-lt);padding-bottom:6px;margin-bottom:12px;}
   .svc{margin-bottom:12px;padding-left:18px;position:relative;}
   .svc::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;
     background:var(--amber);border-radius:2px;transform:rotate(45deg);}
-  .svc .t{font-size:15px;font-weight:600;}
-  .svc .d{font-size:14px;color:var(--grey);}
-  .svc .ex{font-size:13px;color:var(--teal-dk);font-style:italic;}
+  .svc .t{font-size:16px;font-weight:600;}
+  .svc .d{font-size:15.5px;color:var(--grey);}
+  .svc .ex{font-size:14px;color:var(--teal-dk);font-style:italic;}
   /* testimonials */
   .quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .quote{border:1px solid var(--line);border-left:4px solid var(--teal);
     border-radius:10px;padding:18px 20px;background:#fff;}
-  .quote p{font-size:14px;color:var(--ink);font-style:italic;margin-bottom:10px;}
-  .quote .who{font-size:13px;color:var(--grey);font-style:normal;}
+  .quote p{font-size:15.5px;color:var(--ink);font-style:italic;margin-bottom:10px;}
+  .quote .who{font-size:14px;color:var(--grey);font-style:normal;}
   .quote .who b{color:var(--teal-dk);}
-  .quotesrc{font-size:12.5px;color:var(--grey);margin-top:14px;}
+  .quotesrc{font-size:13.5px;color:var(--grey);margin-top:14px;}
   .quotesrc a{color:var(--teal-dk);font-weight:600;}
   @media(max-width:620px){ .quotes{grid-template-columns:1fr;} }
   /* contact */
   .contact{background:var(--teal-lt);border-radius:14px;padding:34px 30px;}
   .contact h2{font-size:24px;margin-bottom:6px;}
-  .contact .sub{font-size:15px;color:var(--grey);margin-bottom:20px;}
+  .contact .sub{font-size:16px;color:var(--grey);margin-bottom:20px;}
   form{display:grid;gap:12px;max-width:520px;}
-  form input,form textarea{font-family:inherit;font-size:15px;padding:12px 14px;
+  /* Keep at 16px or larger. Below that, iOS Safari zooms the whole
+     viewport when a field takes focus and never zooms back out. */
+  form input,form textarea{font-family:inherit;font-size:16px;padding:12px 14px;
     border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
   form input:focus,form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal);}
   form textarea{min-height:110px;resize:vertical;}
@@ -115,7 +123,7 @@
   .altmail a{color:var(--teal-dk);font-weight:600;}
   /* footer */
   footer{border-top:1px solid var(--line);margin-top:40px;}
-  footer .wrap{padding:22px 26px;font-size:12.5px;color:#8A9793;text-align:center;}
+  footer .wrap{padding:22px 26px;font-size:13.5px;color:#8A9793;text-align:center;}
 </style>
 </head>
 <body>
