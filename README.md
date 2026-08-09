@@ -2,9 +2,13 @@
 
 Static consulting site for Peter Frutchey. One `index.html`, no build step. Hosted on GitHub Pages, custom domain peterfrutchey.com.
 
-## Before it goes live, fill in two things
-1. **Formspree ID** — in `index.html`, replace `REPLACE_WITH_YOUR_FORMSPREE_ID` with your real form ID from formspree.io.
-2. **Headshot (optional)** — replace the placeholder block in the hero with `<img src="headshot.jpg" alt="Peter Frutchey">` and add `headshot.jpg` to this repo.
+## Setup, already done
+1. **Formspree ID** — wired up in the contact form's `action` attribute.
+2. **Headshot** — `headshot.jpg` in the hero, 800x1000 (4:5), all EXIF stripped.
+
+## Replacing the headshot
+The hero slot is 4:5. Export at **800x1000**, JPG quality ~86, under ~200KB, named `headshot.jpg`.
+**Strip EXIF before committing** — phone photos embed GPS coordinates, and anything in this repo is publicly downloadable.
 
 ## Editing
 Change `index.html`, commit, push. GitHub Pages redeploys in about a minute.

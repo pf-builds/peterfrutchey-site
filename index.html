@@ -50,11 +50,11 @@
     font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;
     margin-top:24px;border:none;cursor:pointer;}
   .btn:hover{background:var(--teal-dk);}
-  .headshot{aspect-ratio:1/1;border-radius:14px;background:#fff;
+  .headshot{aspect-ratio:4/5;border-radius:14px;background:var(--teal-lt);
     border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-    color:#9DB8B2;font-size:13px;text-align:center;padding:16px;overflow:hidden;
+    color:#9DB8B2;font-size:13px;text-align:center;overflow:hidden;
     box-shadow:0 10px 30px rgba(14,133,119,.10);}
-  .headshot img{width:100%;height:100%;object-fit:cover;border-radius:14px;}
+  .headshot img{width:100%;height:100%;object-fit:cover;display:block;}
   @media(max-width:720px){ .hero-grid{grid-template-columns:1fr;} .headshot{max-width:260px;} h1{font-size:32px;} }
   /* credibility strip */
   .cred{background:var(--teal-dk);}
@@ -140,8 +140,9 @@
       roadmap you can act on.</p>
       <a class="btn" href="#contact">Book a free intro call</a>
     </div>
-    <!-- HEADSHOT: replace the placeholder below with <img src="headshot.jpg" alt="Peter Frutchey"> -->
-    <div class="headshot">Photo coming soon</div>
+    <div class="headshot">
+      <img src="headshot.jpg" width="800" height="1000" alt="Peter Frutchey" fetchpriority="high">
+    </div>
   </div>
 </header>
 
