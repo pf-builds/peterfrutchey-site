@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Peter Frutchey, Operations &amp; AI Consulting</title>
-<meta name="description" content="I help businesses see what's slowing their operations down, and hand them a plan to fix it. Independent operations and AI advisory.">
+<meta name="description" content="I help businesses see what's slowing their operations down, research the decisions in front of them, and hand them a plan to act on. Independent operations, research, and AI advisory.">
 <meta property="og:title" content="Peter Frutchey, Operations &amp; AI Consulting">
-<meta property="og:description" content="I help businesses see what's slowing their operations down, and hand them a plan to fix it.">
+<meta property="og:description" content="I help businesses see what's slowing their operations down, research the decisions in front of them, and hand them a plan to act on.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E8577'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3EPF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,12 +24,11 @@
   h1,h2,h3,h4,.name{font-family:'Space Grotesk','Inter',sans-serif;}
   a{color:inherit;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
-  /* nav */
   nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
     backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
   .navin{display:flex;justify-content:space-between;align-items:center;
     max-width:1080px;margin:0 auto;padding:14px 26px;}
-  .brand{font-weight:700;font-size:19px;display:flex;align-items:center;gap:9px;}
+  .brand{font-weight:700;font-size:19px;display:flex;align-items:center;gap:9px;text-decoration:none;}
   .brand .sq{width:22px;height:22px;border-radius:6px;background:var(--teal);
     display:inline-flex;align-items:center;justify-content:center;color:#fff;
     font-size:11px;font-weight:700;}
@@ -37,7 +36,6 @@
     text-decoration:none;font-weight:500;}
   .navlinks a:hover{color:var(--teal-dk);}
   @media(max-width:620px){ .navlinks{display:none;} }
-  /* hero */
   .hero{padding:66px 0 44px;
     background:
       radial-gradient(ellipse 60% 70% at 85% 20%, rgba(14,133,119,.10), transparent 60%),
@@ -56,48 +54,42 @@
     box-shadow:0 10px 30px rgba(14,133,119,.10);}
   .headshot img{width:100%;height:100%;object-fit:cover;display:block;}
   @media(max-width:720px){ .hero-grid{grid-template-columns:1fr;}
-    /* Fills the column on phones; the cap only bites on wider tablets,
-       where an uncapped 4:5 photo would take up the whole screen. */
     .headshot{max-width:420px;margin-inline:auto;} h1{font-size:34px;} }
-  /* credibility strip */
   .cred{background:var(--teal-dk);}
   .cred .wrap{padding:15px 26px;font-size:14.5px;color:#DFF1ED;
     font-weight:500;text-align:center;letter-spacing:.2px;}
-  /* sections */
   section{padding:52px 0;}
   .eyebrow{font-size:12.5px;text-transform:uppercase;letter-spacing:1.6px;
     color:var(--teal-dk);font-weight:700;margin-bottom:22px;font-family:'Inter';}
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .card{border:1px solid var(--line);border-radius:10px;padding:20px 22px;}
-  /* flex-start, not center: when the heading wraps to two lines the dot
-     should sit against the first line rather than float between them. */
+  .card{border:1px solid var(--line);border-radius:10px;padding:20px 22px;display:flex;flex-direction:column;}
   .card h3{font-size:18px;margin-bottom:7px;display:flex;align-items:flex-start;gap:9px;}
   .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);flex:none;margin-top:10px;}
   .card p{font-size:15.5px;color:var(--grey);}
+  .card .tag{display:block;font-size:12px;text-transform:uppercase;letter-spacing:1.2px;
+    color:var(--teal-dk);font-weight:700;margin-bottom:6px;font-family:'Inter';}
+  .card .more{margin-top:auto;padding-top:12px;font-size:14px;color:var(--teal-dk);
+    font-weight:600;text-decoration:none;}
+  .card .more:hover{text-decoration:underline;}
   @media(max-width:620px){ .cards{grid-template-columns:1fr;} }
-  /* how band */
   .band{background:var(--ink);color:#fff;border-radius:14px;padding:34px 30px;}
   .band .eyebrow{color:#7FD6C8;}
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
   .step .n{font-size:13px;color:var(--amber);font-weight:700;letter-spacing:1px;font-family:'Space Grotesk';}
   .step h4{font-size:17px;margin:4px 0 5px;}
   .step p{font-size:15px;color:#B9C7C3;line-height:1.55;}
-  /* Four across needs real width. Drop to 2x2 early, and to a single
-     column on phones, where four columns left ~3 words per line. */
   @media(max-width:900px){ .steps{grid-template-columns:1fr 1fr;gap:22px;} }
   @media(max-width:560px){ .steps{grid-template-columns:1fr;gap:20px;}
     .band{padding:28px 22px;} }
-  /* services */
-  .grp{margin-bottom:24px;}
-  .grptitle{font-size:16px;font-weight:700;color:var(--teal-dk);
-    border-bottom:1.5px solid var(--teal-lt);padding-bottom:6px;margin-bottom:12px;}
-  .svc{margin-bottom:12px;padding-left:18px;position:relative;}
-  .svc::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;
-    background:var(--amber);border-radius:2px;transform:rotate(45deg);}
-  .svc .t{font-size:16px;font-weight:600;}
-  .svc .d{font-size:15.5px;color:var(--grey);}
-  .svc .ex{font-size:14px;color:var(--teal-dk);font-style:italic;}
-  /* testimonials */
+  .terms{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
+    font-size:15px;color:#B9C7C3;line-height:1.6;}
+  .terms b{color:#fff;font-weight:600;}
+  .venture{background:var(--teal-lt);border:1px solid var(--line);border-radius:14px;
+    padding:28px 30px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
+  .venture h3{font-size:21px;margin-bottom:8px;}
+  .venture p{font-size:15.5px;color:var(--grey);max-width:720px;}
+  .venture .btn{margin-top:0;white-space:nowrap;}
+  @media(max-width:720px){ .venture{grid-template-columns:1fr;} .venture .btn{justify-self:start;} }
   .quotes{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   .quote{border:1px solid var(--line);border-left:4px solid var(--teal);
     border-radius:10px;padding:18px 20px;background:#fff;}
@@ -107,13 +99,10 @@
   .quotesrc{font-size:13.5px;color:var(--grey);margin-top:14px;}
   .quotesrc a{color:var(--teal-dk);font-weight:600;}
   @media(max-width:620px){ .quotes{grid-template-columns:1fr;} }
-  /* contact */
   .contact{background:var(--teal-lt);border-radius:14px;padding:34px 30px;}
   .contact h2{font-size:24px;margin-bottom:6px;}
   .contact .sub{font-size:16px;color:var(--grey);margin-bottom:20px;}
   form{display:grid;gap:12px;max-width:520px;}
-  /* Keep at 16px or larger. Below that, iOS Safari zooms the whole
-     viewport when a field takes focus and never zooms back out. */
   form input,form textarea{font-family:inherit;font-size:16px;padding:12px 14px;
     border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
   form input:focus,form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal);}
@@ -121,20 +110,20 @@
   form button{justify-self:start;}
   .altmail{font-size:13.5px;color:var(--grey);margin-top:14px;}
   .altmail a{color:var(--teal-dk);font-weight:600;}
-  /* footer */
   footer{border-top:1px solid var(--line);margin-top:40px;}
   footer .wrap{padding:22px 26px;font-size:13.5px;color:#8A9793;text-align:center;}
+  footer a{color:#0A5F55;font-weight:600;}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="navin">
-    <span class="brand"><span class="sq">PF</span>Peter Frutchey</span>
+    <a class="brand" href="index.html"><span class="sq">PF</span>Peter Frutchey</a>
     <span class="navlinks">
-      <a href="#whatido">What I do</a>
+      <a href="#whatido">How I help</a>
       <a href="#how">How it works</a>
-      <a href="#services">Services</a>
+      <a href="services.html">Services</a>
       <a href="#proof">References</a>
       <a href="#contact">Contact</a>
     </span>
@@ -147,9 +136,10 @@
       <div style="font-size:15px;font-weight:600;color:var(--teal-dk);letter-spacing:.3px;margin-bottom:10px;">Operations &amp; AI Consulting</div>
       <h1>Find what's slowing your business down. Get a plan to fix it.</h1>
       <p>I've spent thirteen years running the systems that make service and support teams
-      work: process, knowledge, self-service, and AI. I bring that experience to your
-      business as an outside set of expert eyes. I assess, I advise, and I hand you a
-      roadmap you can act on.</p>
+      work: process, knowledge, self-service, and AI. I bring that to your business as an
+      outside set of expert eyes. I assess how the work really runs, research the decisions
+      in front of you, and give you an honest recommendation you can act on. If you want it
+      carried out, I can help with that too.</p>
       <a class="btn" href="#contact">Book a free intro call</a>
     </div>
     <div class="headshot">
@@ -168,20 +158,31 @@
 
 <section id="whatido">
   <div class="wrap">
-    <div class="eyebrow">What I look at for you</div>
+    <div class="eyebrow">Four ways I help</div>
     <div class="cards">
-      <div class="card"><h3><span class="dot"></span>Where AI actually fits</h3>
-        <p>I find where AI would save your team real time and money. No platform to sell
-        and no jargon. You get a straight answer you can understand and act on.</p></div>
-      <div class="card"><h3><span class="dot"></span>Where the work bogs down</h3>
+      <div class="card"><span class="tag">AI Enablement</span>
+        <h3><span class="dot"></span>Where AI actually fits</h3>
+        <p>I find where AI would save your team real time and money, and how to use it
+        safely. No platform to sell and no jargon. You get a straight answer you can
+        understand and act on.</p>
+        <a class="more" href="services.html#ai">See AI services &rarr;</a></div>
+      <div class="card"><span class="tag">Advisory &amp; Strategy</span>
+        <h3><span class="dot"></span>Where the work bogs down</h3>
         <p>I map how work really flows, find the bottlenecks and rework, and give you a clear
-        recommendation for a cleaner way to run.</p></div>
-      <div class="card"><h3><span class="dot"></span>How to lighten your support load</h3>
-        <p>I assess where a help center or self-service could cut the questions reaching your
-        team. I've guided this to a measurable 7% drop in contacts.</p></div>
-      <div class="card"><h3><span class="dot"></span>Where your knowledge is stuck</h3>
-        <p>I find what's trapped in people's heads and lay out how to turn it into clear
-        procedures your team, and your AI tools, can rely on.</p></div>
+        recommendation for a cleaner way to run. Operations, service and support, knowledge,
+        and the people running it.</p>
+        <a class="more" href="services.html#advisory">See advisory services &rarr;</a></div>
+      <div class="card"><span class="tag">Research &amp; Analysis</span>
+        <h3><span class="dot"></span>Whether an idea holds up</h3>
+        <p>Weighing a new tool, product, or direction? I research the market and the
+        competitors, lay out build versus buy, and give you a recommendation with the
+        risks named, so you decide with the full picture.</p>
+        <a class="more" href="services.html#research">See research services &rarr;</a></div>
+      <div class="card"><span class="tag">Implementation &amp; Delivery</span>
+        <h3><span class="dot"></span>Getting it built without getting burned</h3>
+        <p>I translate your requirements for vendors and development teams, represent you in
+        the room, and pressure-test the rollout. You're never sold the wrong thing.</p>
+        <a class="more" href="services.html#implementation">See delivery services &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -195,81 +196,35 @@
           <p>A free call. You tell me what you're solving for and I'll tell you
           how I can help.</p></div>
         <div class="step"><div class="n">02</div><h4>Agree</h4>
-          <p>If it's a fit, we align on scope and price in writing before any work starts.</p></div>
+          <p>If it's a fit, we set the scope, deliverables, and a fixed price in writing
+          before any work starts.</p></div>
         <div class="step"><div class="n">03</div><h4>Assess</h4>
           <p>I dive into how the work actually runs and where the problems are.</p></div>
         <div class="step"><div class="n">04</div><h4>Recommend</h4>
           <p>You get a prioritized plan you can act on. I can help you carry it out,
           or hand it to your team.</p></div>
       </div>
+      <div class="terms"><b>Fixed-price deliverables, not hourly.</b> Every step is scoped in
+        writing before it starts, so you know the cost up front, and you can stop after any
+        phase with no obligation to continue.</div>
     </div>
   </div>
 </section>
 
-<section id="services" style="padding-top:0;">
+<section id="venture" style="padding-top:0;">
   <div class="wrap">
-    <div class="eyebrow">What I can help with</div>
-
-    <div class="grp">
-      <div class="grptitle">Start here: assessments &amp; advice</div>
-      <div class="svc"><span class="t">AI opportunity review.</span>
-        <span class="d">I find the two or three places AI would actually save your team time,
-        ranked by effort and payoff.</span>
-        <span class="ex">You get a clear plan you can act on, with or without me.</span></div>
-      <div class="svc"><span class="t">Operations &amp; process review.</span>
-        <span class="d">I map how work really flows, find the waste and rework, and recommend a
-        cleaner way to run it.</span>
-        <span class="ex">Work like this has cut transfers 20% and contacts 9% on a team.</span></div>
-      <div class="svc"><span class="t">Support &amp; self-service assessment.</span>
-        <span class="d">I find where a help center or self-service could cut the questions
-        reaching your team, and what it would take.</span>
-        <span class="ex">Guided to a 7% drop in contacts, ~90% of visitors never needing to follow up.</span></div>
-      <div class="svc"><span class="t">Content &amp; knowledge strategy.</span>
-        <span class="d">I evaluate how your content is created, maintained, and used across
-        the organization, then lay out what a clean, governed content system looks like.</span>
-        <span class="ex">Built a 200+ article public help center and a 4,000-article internal knowledge base.</span></div>
-      <div class="svc"><span class="t">Rollout &amp; readiness review.</span>
-        <span class="d">Before you onboard a big customer or launch new software, I pressure-test
-        whether you're actually ready and flag what will break.</span>
-        <span class="ex">Delivered readiness across dozens of enterprise implementation projects.</span></div>
-      <div class="svc"><span class="t">Advisory retainer.</span>
-        <span class="d">An ongoing outside set of expert eyes for a founder or operations lead.
-        A standing monthly call and someone to think the hard calls through with.</span></div>
+    <div class="venture">
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px;">Turning expertise into a product or company?</div>
+        <h3>A phased path from idea to a build you can trust.</h3>
+        <p>If you know your field cold and you're weighing a software product or a new venture,
+        I run it in steps: a scoping session to capture your vision and requirements, a
+        feasibility and options study so you decide with the full picture, and implementation
+        advocacy if you build. Each step is scoped and priced before it starts, and you can
+        stop after any one.</p>
+      </div>
+      <a class="btn" href="#contact">Talk it through</a>
     </div>
-
-    <div class="grp">
-      <div class="grptitle">Workshops</div>
-      <div class="svc"><span class="t">AI capabilities workshop.</span>
-        <span class="d">A half or full day teaching your team to use AI in their actual work,
-        with customized exercises built from your workflows. You leave with a prioritized
-        list of where AI fits and how to start.</span></div>
-      <div class="svc"><span class="t">Process workshop facilitation.</span>
-        <span class="d">I prep the workflow analysis, build the agenda, and run the on-site session
-        with your cross-functional leaders. We drive to decisions, and you get a written
-        action plan out of it.</span>
-        <span class="ex">Facilitated process-improvement workshops for 20+ senior leaders.</span></div>
-    </div>
-
-    <div class="grp">
-      <div class="grptitle">Quick win: business collateral</div>
-      <div class="svc"><span class="t">Sharpen how you present the business.</span>
-        <span class="d">Clear one-pagers, service and pricing menus, and proposals that explain
-        what you offer and help you win the work.</span>
-        <span class="ex">Often the fastest, lowest-cost place to start together.</span></div>
-      <div class="svc"><span class="t">A website that works for you.</span>
-        <span class="d">A clean, fast-loading site that presents your business well. I handle
-        the domain, hosting, and search indexing so you own everything when we're done.
-        Interactive tools like calculators or assessments if you need them.</span></div>
-    </div>
-
-    <div class="grp">
-      <div class="grptitle">If you want it built too</div>
-      <div class="svc"><span class="t">Hands-on help carrying out the plan.</span>
-        <span class="d">Once we agree on the direction, I can build the AI assistant, set up the
-        help center, run the process redesign, or guide your own team doing it. Scoped as a
-        defined project so it stays clear.</span></div>
-    </div>
-
   </div>
 </section>
 
@@ -330,13 +285,12 @@
 <footer>
   <div class="wrap">
     Peter Frutchey &nbsp;·&nbsp; Operations &amp; AI Consulting &nbsp;·&nbsp; Sacramento, California
-    &nbsp;·&nbsp; Advisory, project, and fractional engagements &nbsp;·&nbsp;
-    <a href="https://www.linkedin.com/in/peterfrutchey" rel="noopener" style="color:#0A5F55;font-weight:600;">LinkedIn</a>
+    &nbsp;·&nbsp; <a href="services.html">All services</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/peterfrutchey" rel="noopener">LinkedIn</a>
   </div>
 </footer>
 
 <script>
-  // Assemble the email so the raw address isn't sitting in the HTML for scrapers.
   (function(){
     var u="peterfrutchey", d="gmail.com";
     var a=document.getElementById("mail");

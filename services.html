@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services, Peter Frutchey Consulting</title>
+<meta name="description" content="Fixed-price consulting services across AI enablement, advisory and strategy, research and analysis, and implementation advisory. Scoped in writing before any work starts.">
+<meta property="og:title" content="Services, Peter Frutchey Consulting">
+<meta property="og:description" content="Fixed-price consulting services across AI enablement, advisory and strategy, research and analysis, and implementation advisory.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E8577'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3EPF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16211F; --teal:#0E8577; --teal-dk:#0A5F55; --teal-lt:#E8F5F2;
+    --amber:#E08A2B; --grey:#4A5754; --line:#CBD9D5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);line-height:1.6;
+    background:#fff;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px;}
+  nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .navin{display:flex;justify-content:space-between;align-items:center;
+    max-width:1080px;margin:0 auto;padding:14px 26px;}
+  .brand{font-weight:700;font-size:19px;display:flex;align-items:center;gap:9px;text-decoration:none;}
+  .brand .sq{width:22px;height:22px;border-radius:6px;background:var(--teal);
+    display:inline-flex;align-items:center;justify-content:center;color:#fff;
+    font-size:11px;font-weight:700;}
+  .navlinks a{margin-left:24px;font-size:14.5px;color:var(--grey);
+    text-decoration:none;font-weight:500;}
+  .navlinks a:hover,.navlinks a.on{color:var(--teal-dk);}
+  .navlinks a.on{font-weight:700;}
+  @media(max-width:620px){ .navlinks{display:none;} }
+  .pagehead{padding:54px 0 30px;
+    background:linear-gradient(180deg, var(--teal-lt) 0%, #fff 100%);}
+  .eyebrow{font-size:12.5px;text-transform:uppercase;letter-spacing:1.6px;
+    color:var(--teal-dk);font-weight:700;margin-bottom:14px;font-family:'Inter';}
+  h1{font-size:36px;line-height:1.15;letter-spacing:-.8px;font-weight:700;}
+  .pagehead p{font-size:17px;color:var(--grey);margin-top:14px;max-width:700px;}
+  @media(max-width:720px){ h1{font-size:30px;} }
+  .jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+  .jump a{font-size:13.5px;font-weight:600;color:var(--teal-dk);text-decoration:none;
+    background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;}
+  .jump a:hover{border-color:var(--teal);}
+  .btn{display:inline-block;background:var(--teal);color:#fff;font-weight:600;
+    font-size:15px;padding:12px 26px;border-radius:8px;text-decoration:none;
+    margin-top:24px;border:none;cursor:pointer;}
+  .btn:hover{background:var(--teal-dk);}
+  section{padding:40px 0 8px;}
+  .grp{margin-bottom:34px;scroll-margin-top:84px;}
+  .grptitle{font-size:22px;font-weight:700;color:var(--teal-dk);
+    border-bottom:1.5px solid var(--teal-lt);padding-bottom:8px;margin-bottom:8px;
+    font-family:'Space Grotesk','Inter',sans-serif;}
+  .grpintro{font-size:15.5px;color:var(--grey);margin-bottom:14px;max-width:760px;}
+  .svc{margin-bottom:13px;padding-left:18px;position:relative;}
+  .svc::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;
+    background:var(--amber);border-radius:2px;transform:rotate(45deg);}
+  .svc .t{font-size:16px;font-weight:600;}
+  .svc .d{font-size:15.5px;color:var(--grey);}
+  .svc .ex{font-size:14px;color:var(--teal-dk);font-style:italic;}
+  .terms{background:var(--ink);color:#fff;border-radius:14px;padding:26px 30px;
+    font-size:15.5px;line-height:1.6;color:#B9C7C3;margin-bottom:34px;}
+  .terms b{color:#fff;font-weight:600;}
+  .contact{background:var(--teal-lt);border-radius:14px;padding:34px 30px;margin-top:10px;}
+  .contact h2{font-size:24px;margin-bottom:6px;}
+  .contact .sub{font-size:16px;color:var(--grey);margin-bottom:20px;}
+  form{display:grid;gap:12px;max-width:520px;}
+  form input,form textarea{font-family:inherit;font-size:16px;padding:12px 14px;
+    border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
+  form input:focus,form textarea:focus{outline:2px solid var(--teal);border-color:var(--teal);}
+  form textarea{min-height:110px;resize:vertical;}
+  form button{justify-self:start;}
+  .altmail{font-size:13.5px;color:var(--grey);margin-top:14px;}
+  .altmail a{color:var(--teal-dk);font-weight:600;}
+  footer{border-top:1px solid var(--line);margin-top:40px;}
+  footer .wrap{padding:22px 26px;font-size:13.5px;color:#8A9793;text-align:center;}
+  footer a{color:#0A5F55;font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="navin">
+    <a class="brand" href="index.html"><span class="sq">PF</span>Peter Frutchey</a>
+    <span class="navlinks">
+      <a href="index.html#whatido">How I help</a>
+      <a href="index.html#how">How it works</a>
+      <a class="on" href="services.html">Services</a>
+      <a href="index.html#proof">References</a>
+      <a href="#contact">Contact</a>
+    </span>
+  </div>
+</nav>
+
+<header class="pagehead">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h1>What I can help with</h1>
+    <p>Everything below is a fixed-price deliverable, scoped in writing before it starts,
+    so you know the cost up front and can stop after any step. Fees depend on scope, and
+    I'm glad to give you definitive numbers once we know the direction. Start with a free call.</p>
+    <div class="jump">
+      <a href="#ai">AI Enablement</a>
+      <a href="#advisory">Advisory &amp; Strategy</a>
+      <a href="#research">Research &amp; Analysis</a>
+      <a href="#implementation">Implementation &amp; Delivery</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#collateral">Business collateral</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+
+    <div class="grp" id="ai">
+      <div class="grptitle">AI Enablement</div>
+      <div class="grpintro">Where AI actually fits in your work, and how to use it safely. Vendor-neutral, no platform to sell.</div>
+      <div class="svc"><span class="t">AI opportunity review.</span>
+        <span class="d">I find the two or three places AI would actually save your team time,
+        ranked by effort and payoff.</span>
+        <span class="ex">You get a clear plan you can act on, with or without me.</span></div>
+      <div class="svc"><span class="t">AI agent or automation pilot.</span>
+        <span class="d">I design and build a working AI assistant for one specific workflow,
+        scoped so you can see it earn its keep before going further.</span></div>
+      <div class="svc"><span class="t">AI adoption program.</span>
+        <span class="d">A time-boxed rollout: training, usage measurement, and iteration so the
+        tool actually gets used.</span></div>
+      <div class="svc"><span class="t">AI risk and governance readiness.</span>
+        <span class="d">Guardrails so nothing unsafe ships on its own: where humans stay in the
+        loop, what gets recorded, and a prioritized fix list.</span></div>
+      <div class="svc"><span class="t">AI capabilities workshop.</span>
+        <span class="d">A half or full day teaching your team to use AI in their actual work,
+        with customized exercises built from your workflows. You leave with a prioritized
+        list of where AI fits and how to start.</span></div>
+    </div>
+
+    <div class="grp" id="advisory">
+      <div class="grptitle">Advisory &amp; Strategy</div>
+      <div class="grpintro">Assess how a business or function actually runs, find the opportunity or the break, and recommend the path. Operations, service and support, knowledge, and the people running it.</div>
+      <div class="svc"><span class="t">Operations &amp; process review.</span>
+        <span class="d">I map how work really flows, find the waste and rework, and recommend a
+        cleaner way to run it.</span>
+        <span class="ex">Work like this has cut transfers 20% and contacts 9% on a team.</span></div>
+      <div class="svc"><span class="t">Support &amp; self-service assessment.</span>
+        <span class="d">I find where a help center or self-service could cut the questions
+        reaching your team, and what it would take.</span>
+        <span class="ex">Guided to a 7% drop in contacts, ~90% of visitors never needing to follow up.</span></div>
+      <div class="svc"><span class="t">Content &amp; knowledge strategy.</span>
+        <span class="d">I evaluate how your content is created, maintained, and used across
+        the organization, then lay out what a clean, governed content system looks like.</span>
+        <span class="ex">Built a 200+ article public help center and a 4,000-article internal knowledge base.</span></div>
+      <div class="svc"><span class="t">Operating model, metrics, and support-function design.</span>
+        <span class="d">How a service or operations function should be structured, what to
+        measure, and a launch plan your team can run.</span></div>
+      <div class="svc"><span class="t">Escalations and voice-of-customer design.</span>
+        <span class="d">Intake and triage for hard cases, and a feedback program that routes
+        what customers say to the people who can fix it.</span></div>
+      <div class="svc"><span class="t">Leadership and hiring process design.</span>
+        <span class="d">Supervisor onboarding, manager development, and structured interviewing
+        so the people side keeps up with the process side.</span></div>
+      <div class="svc"><span class="t">Go-to-market advisory.</span>
+        <span class="d">Package and price your own expertise into offerings your market will
+        buy, such as taking a proven program to other organizations.</span></div>
+      <div class="svc"><span class="t">Advisory retainer.</span>
+        <span class="d">An ongoing outside set of expert eyes for a founder or operations lead.
+        A standing call each month and someone to think the hard calls through with, within
+        a set block of hours.</span></div>
+    </div>
+
+    <div class="grp" id="research">
+      <div class="grptitle">Research &amp; Analysis</div>
+      <div class="grpintro">For the decision in front of you: does the idea hold up, what's already out there, and what should you do about it.</div>
+      <div class="svc"><span class="t">Feasibility &amp; options study.</span>
+        <span class="d">Does the idea work, for whom, and at what cost? Market and demand,
+        competitors, the compliance picture, build versus buy, and options with a straight
+        recommendation.</span></div>
+      <div class="svc"><span class="t">Market &amp; competitor analysis.</span>
+        <span class="d">Who else is in the space, what they charge, and where the gaps are.</span></div>
+      <div class="svc"><span class="t">Build-versus-buy analysis.</span>
+        <span class="d">License, configure, or build your own, laid out with honest tradeoffs
+        and a recommendation.</span></div>
+      <div class="svc"><span class="t">Idea stress-test &amp; business case.</span>
+        <span class="d">I pressure-test a concept and hand you a defensible business case with
+        the risks named, not hidden.</span></div>
+      <div class="svc"><span class="t">Vendor selection advisory.</span>
+        <span class="d">I evaluate candidate vendors and platforms against what you actually
+        need and recommend the fit.</span></div>
+    </div>
+
+    <div class="grp" id="implementation">
+      <div class="grptitle">Implementation &amp; Delivery Advisory</div>
+      <div class="grpintro">Help making it real without becoming your dev shop. I sit on your side of the table through the build.</div>
+      <div class="svc"><span class="t">Requirements translation.</span>
+        <span class="d">I turn your vision into a plan and specification a vendor or development
+        team can build from, so nothing gets lost between you and them.</span></div>
+      <div class="svc"><span class="t">Vendor and dev-team representation.</span>
+        <span class="d">Selection criteria, service levels, quality checks, and honest translation
+        both ways, so you're never sold the wrong thing.</span></div>
+      <div class="svc"><span class="t">Rollout &amp; readiness review.</span>
+        <span class="d">Before you onboard a big customer or launch new software, I pressure-test
+        whether you're actually ready and flag what will break.</span>
+        <span class="ex">Delivered readiness across dozens of enterprise implementation projects.</span></div>
+      <div class="svc"><span class="t">Testing and rollout validation.</span>
+        <span class="d">Test strategy, workflow validation, and defect tracking so the launch
+        lands the way it was supposed to.</span></div>
+      <div class="svc"><span class="t">Change management for new tools.</span>
+        <span class="d">The people side of a rollout, so the thing you paid for gets used.</span></div>
+      <div class="svc"><span class="t">Knowledge base and procedure build-out.</span>
+        <span class="d">Stand up, move, or reorganize a knowledge base, and turn tribal knowledge
+        into written procedures your team and your AI tools can rely on.</span></div>
+    </div>
+
+    <div class="grp" id="workshops">
+      <div class="grptitle">Workshops</div>
+      <div class="grpintro">A day in the room, with prep beforehand and a written action plan afterward.</div>
+      <div class="svc"><span class="t">Process workshop facilitation.</span>
+        <span class="d">I prep the workflow analysis, build the agenda, and run the on-site session
+        with your cross-functional leaders. We drive to decisions, and you get a written
+        action plan out of it.</span>
+        <span class="ex">Facilitated process-improvement workshops for 20+ senior leaders.</span></div>
+      <div class="svc"><span class="t">AI capabilities workshop.</span>
+        <span class="d">Half or full day, built from your real workflows. Listed under AI Enablement above.</span></div>
+    </div>
+
+    <div class="grp" id="collateral">
+      <div class="grptitle">Quick win: business collateral</div>
+      <div class="grpintro">Often the fastest, lowest-cost place to start together.</div>
+      <div class="svc"><span class="t">Sharpen how you present the business.</span>
+        <span class="d">Clear one-pagers, service and pricing menus, and proposals that explain
+        what you offer and help you win the work.</span></div>
+      <div class="svc"><span class="t">A website that works for you.</span>
+        <span class="d">A clean, fast-loading site that presents your business well. I handle
+        the domain, hosting, and search indexing so you own everything when we're done.
+        Interactive tools like calculators or assessments if you need them.</span></div>
+    </div>
+
+    <div class="terms"><b>How pricing works.</b> Fixed-price deliverables, not hourly. Every
+      engagement gets a written statement of work with the scope, timeline, deliverables, and
+      price before anything starts. Retainers are a set block of hours per month, not
+      unlimited. You can stop after any phase with no obligation to continue.</div>
+
+    <div class="contact" id="contact">
+      <h2>Start with a free call</h2>
+      <div class="sub">Tell me what you're solving for. If I can help, I'll show you how.</div>
+      <form action="https://formspree.io/f/mqpzegdz" method="POST">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <input type="text" name="company" placeholder="Company (optional)">
+        <textarea name="message" placeholder="What are you looking to solve?" required></textarea>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <div class="altmail">Or email me directly at
+        <a id="mail" href="#">(enable JavaScript to see)</a>.
+        <noscript>peterfrutchey [at] gmail [dot] com</noscript>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Peter Frutchey &nbsp;·&nbsp; Operations &amp; AI Consulting &nbsp;·&nbsp; Sacramento, California
+    &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/peterfrutchey" rel="noopener">LinkedIn</a>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var u="peterfrutchey", d="gmail.com";
+    var a=document.getElementById("mail");
+    if(a){ a.href="mailto:"+u+"@"+d; a.textContent=u+"@"+d; }
+  })();
+</script>
+
+</body>
+</html>
